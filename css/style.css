@@ -17,12 +17,13 @@ Grey dark 3: #999
 */
 :root {
   --color-primary: #eb2f64;
-  --color-primary-light: #ff3366;
-  --color-primary-dark: #ba265d;
+  --color-primary-light: #F06292;
+  --color-primary-dark: #EC407A;
   --color-grey-light-1: #faf9f9;
   --color-grey-light-2: #f4f2f2;
   --color-grey-light-3: #f0eeee;
   --color-grey-light-4: #ccc;
+  --color-secondary: rgb(55, 184, 189);
   --color-grey-dark-1: #333;
   --color-grey-dark-2: #777;
   --color-grey-dark-3: #999;
@@ -47,19 +48,143 @@ html {
       font-size: 50%; } }
 
 body {
-  display: grid;
+  background-color: var(--color-grey-light-2);
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   line-height: 1.6;
+  background-image: linear-gradient(to right bottom, var(--color-primary-dark), var(--color-primary-light));
   background-size: cover;
   background-repeat: no-repeat;
-  grid-template-columns: [list-start] 3fr [list-end todos-start] 8fr [todo-end];
   min-height: 100vh; }
 
-.todos {
-  background-color: aqua;
-  grid-column: todos-start/todos-end; }
+.container {
+  display: grid;
+  grid-template-columns: 15fr 10fr 15fr;
+  grid-template-rows: 1fr 7fr 1fr; }
 
-.list {
-  background-color: bisque;
-  grid-column: list-start/list-end; }
+.checked {
+  text-decoration: line-through red; }
+
+input[type=checkbox] + label .todos-list__li-icon-2 {
+  stroke-dasharray: 70;
+  stroke-dashoffset: 70; }
+
+input[type=checkbox] + label .todos-list__li-text-2 {
+  stroke-dasharray: 360;
+  stroke-dashoffset: 360; }
+
+input[type=checkbox]:checked + label .todos-list__li-icon-2 {
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 1s linear; }
+
+input[type=checkbox]:checked + label .todos-list__li-text-2 {
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 1s linear; }
+
+input[type=checkbox]:not(:checked) + label .todos-list__li-icon-2 {
+  stroke-dashoffset: 70;
+  transition: stroke-dashoffset 0.5s linear; }
+
+input[type=checkbox]:not(:checked) + label .todos-list__li-text-2 {
+  stroke-dashoffset: 360;
+  transition: stroke-dashoffset 0.5s linear; }
+
+.checkbox {
+  display: none; }
+
+ul li {
+  list-style-type: none; }
+
+.todos {
+  display: grid;
+  grid-column: 2/3;
+  grid-row: 2/3;
+  justify-content: center;
+  min-height: 100vh;
+  grid-template-rows: 5rem 8rem auto; }
+  .todos-head {
+    display: grid;
+    grid-row: 1/2;
+    grid-template-columns: 1fr 1fr;
+    font-size: 3.5rem;
+    color: whitesmoke;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; }
+    .todos-head .header {
+      grid-column: 1/2; }
+    .todos-head .fa {
+      margin-left: 2.5rem;
+      margin-top: 12px;
+      grid-column: 2/3; }
+  .todos-form {
+    grid-row: 2/3;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; }
+    .todos-form-input {
+      width: 25rem;
+      height: 4rem;
+      border: none;
+      border-radius: 5px;
+      padding: 1.2rem;
+      background-color: whitesmoke; }
+    .todos-form-button {
+      margin-left: 1rem;
+      height: 4rem;
+      width: 4rem;
+      border: none;
+      border-radius: 5px;
+      background-color: orangered; }
+  .todos-list {
+    position: relative;
+    grid-row: 3/4; }
+    .todos-list__li {
+      cursor: pointer;
+      height: 4.5rem;
+      margin-bottom: 1.5rem;
+      padding: 0.7rem;
+      box-shadow: var(--shadow-dark);
+      border-radius: 1rem;
+      background-color: whitesmoke;
+      top: 1rem;
+      display: grid;
+      grid-template-columns: 1fr 4fr 1fr;
+      align-items: center;
+      justify-content: space-between;
+      position: relative; }
+      .todos-list__li-icon {
+        position: absolute;
+        grid-column: 1/2; }
+        .todos-list__li-icon-1 {
+          position: absolute; }
+        .todos-list__li-icon-2 {
+          margin-left: 1.5rem; }
+      .todos-list__li-text {
+        border-radius: 5rem;
+        position: absolute;
+        grid-column: 2/3;
+        font-size: 2rem;
+        display: flex;
+        padding-left: 3rem;
+        flex-direction: row;
+        justify-content: left;
+        align-items: center;
+        height: 100%;
+        width: 100%; }
+        .todos-list__li-text-1 {
+          position: absolute; }
+        .todos-list__li-text-2 {
+          margin-top: 0.5rem;
+          margin-left: -2.8rem; }
+      .todos-list__li-delete-todo {
+        cursor: pointer;
+        position: absolute;
+        grid-column: 3/4;
+        height: 100%;
+        width: 100%;
+        border: none;
+        border-radius: 10rem;
+        background-color: red; }

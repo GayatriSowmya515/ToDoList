@@ -1,0 +1,46 @@
+.checked{
+    text-decoration: line-through red;
+    
+}
+
+input[type=checkbox] + label{
+    .todos-list__li-icon-2{
+        stroke-dasharray: 70;
+        stroke-dashoffset: 70;
+    }
+    .todos-list__li-text-2{
+        stroke-dasharray: 360;
+        stroke-dashoffset: 360;
+    }
+
+}
+input[type=checkbox]:checked + label{
+    .todos-list__li-icon-2{
+      stroke-dashoffset: 0;
+      transition: stroke-dashoffset 1s linear;
+    }
+   .todos-list__li-text-2{
+      stroke-dashoffset: 0;
+      transition: stroke-dashoffset 1s linear;
+   }
+} 
+
+input[type=checkbox]:not(:checked) + label{
+    .todos-list__li-icon-2{
+      stroke-dashoffset: 70;
+      transition: stroke-dashoffset 0.5s linear;
+    }
+   .todos-list__li-text-2{
+      stroke-dashoffset: 360;
+      transition: stroke-dashoffset 0.5s linear;
+   }
+} 
+
+.checkbox{
+    display: none;
+}
+
+ul li
+{
+    list-style-type: none;
+} 

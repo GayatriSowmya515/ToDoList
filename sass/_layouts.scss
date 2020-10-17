@@ -1,13 +1,131 @@
 
 .todos{
-    background-color: aqua;
-  grid-column: todos-start/todos-end;
+  display: grid;
+  grid-column: 2/3;
+  grid-row: 2/3;
+  //align-items: center;
+  justify-content: center;
+
+  min-height: 100vh;
+  grid-template-rows: 5rem 8rem auto;
+  &-head{
+    display: grid;
+    grid-row: 1/2;
+    grid-template-columns: 1fr 1fr;
+    font-size: 3.5rem;
+    color: whitesmoke;
+    display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    //text-decoration: bold;
+   
+
+    .header{
+       grid-column: 1/2;    
+    }
+    .fa{
+        margin-left: 2.5rem;
+        margin-top: 12px;
+        grid-column: 2/3;
+    }
+  }
+
+  &-form{
+    grid-row: 2/3;
+    display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+
+    &-input{
+      width: 25rem;
+      height: 4rem;
+      border: none;
+      border-radius: 5px;
+      padding: 1.2rem;
+      background-color: whitesmoke;
+      
+    }
+    &-button{
+      margin-left: 1rem;
+      height:4rem;
+      width: 4rem;
+      border: none;
+      border-radius: 5px;
+      background-color: orangered;
+    }
+  }
+
+  &-list{
+    position: relative;
+    grid-row: 3/4;
+   
+    &__li{
+      cursor: pointer;
+      height: 4.5rem;
+      margin-bottom: 1.5rem;
+      padding: 0.7rem;
+      box-shadow: var(--shadow-dark);
+      border-radius: 1rem;
+      background-color:whitesmoke;
+      top:1rem;
+      display: grid;
+      grid-template-columns: 1fr 4fr 1fr;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+
+      &-icon{
+        
+         position: absolute;
+         grid-column: 1/2;
+
+         &-1{
+           position: absolute;
+         }
+         &-2{
+          
+      
+          margin-left: 1.5rem;
+         }
+      }
+      &-text{
+        border-radius: 5rem;
+        position: absolute;
+        grid-column: 2/3;
+        font-size: 2rem;
+        display: flex;
+        padding-left: 3rem;
+        flex-direction: row;
+        justify-content: left;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        &-1{
+          position: absolute;
+        }
+        &-2{
+          margin-top: 0.5rem;
+          margin-left: -2.8rem;
+        }
+      }
+   
+      &-delete-todo{
+        cursor: pointer;
+        position: absolute;
+        grid-column: 3/4;
+        height: 100%;
+        width: 100%;
+        border: none;
+        border-radius: 10rem;
+        background-color: red;
+      }
+       
   
-}
-
-
-.list{
-    background-color: bisque;
-    grid-column: list-start/list-end;
+     
     
+    }
+    
+  }
 }
