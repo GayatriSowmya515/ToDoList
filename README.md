@@ -9,4 +9,4 @@ You can try the code [here](https://codepen.io/Sahi515/pen/ZEOWgxN) (CodePen)
 
 ## LICENCE
 
-This project is licensed under the MIT License(LICENSE) - see the LICENSE.md(LICENSE) file for details
+This project is licensed under the MIT License(LICENSE) - see the LICENSE.md(LICENSE) file for details.
