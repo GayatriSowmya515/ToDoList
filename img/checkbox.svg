@@ -1,9 +1,1 @@
-<svg width="29" height="28" viewBox="0 0 29 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect id="checkbox" x="1.4996" y="1.40525" width="25.2002" height="25.0949" rx="5.6" transform="rotate(0.215397 1.4996 1.40525)" fill="url(#paint0_linear)" fill-opacity="0.7" stroke="#28BAE8" stroke-width="2.8"/>
-<defs>
-<linearGradient id="paint0_linear" x1="25.2698" y1="1.62513" x2="0.907086" y2="25.4804" gradientUnits="userSpaceOnUse">
-<stop stop-color="#7DCEE8" stop-opacity="0.8"/>
-<stop offset="1" stop-color="#F2FAFD" stop-opacity="0"/>
-</linearGradient>
-</defs>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="29" height="28" fill="none" viewBox="0 0 29 28"><rect id="checkbox" width="25.2" height="25.095" x="1.5" y="1.405" fill="url(#paint0_linear)" fill-opacity=".7" stroke="#28BAE8" stroke-width="2.8" rx="5.6" transform="rotate(0.215397 1.4996 1.40525)"/><defs><linearGradient id="paint0_linear" x1="25.27" x2=".907" y1="1.625" y2="25.48" gradientUnits="userSpaceOnUse"><stop stop-color="#7DCEE8" stop-opacity=".8"/><stop offset="1" stop-color="#F2FAFD" stop-opacity="0"/></linearGradient></defs></svg>
